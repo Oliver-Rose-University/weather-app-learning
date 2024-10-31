@@ -8,6 +8,7 @@ const tempAmount = document.getElementById("temp-amount");
 const humiditySlider = document.getElementById("humidity-slider");
 const windSlider = document.getElementById("wind-slider");
 const tempSlider = document.getElementById("temp-slider");
+const leafAnimations = document.getElementsByClassName("leaf");
 
 const apiUrl = "http://localhost:5500/test.json";
 
@@ -35,6 +36,11 @@ function updateData(json) {
     windSlider.value = (json.current.wind_speed);
     tempAmount.innerHTML = (json.current.temperature + "ºC");
     tempSlider.value = (json.current.temperature);
+
+    const newDuration = (50 - Number(json.current.wind_speed)) * 11 / 50 + 1;
+    for(const leaf of leafAnimations){
+        leaf.style.animationDuration = newDuration + "s";
+    }
 }
 
 

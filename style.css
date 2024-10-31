@@ -105,3 +105,24 @@ body{
   #temp-amount{
     translate: 0px 275px;
   }
+
+
+  @keyframes leafAnimation {
+    0%   {transform: translate(-10vw, 0) rotate(0);}
+    20%  {transform: translate(15vw, 10vh) rotate(85deg);}
+    65%  {transform: translate(55vw, 12vh) rotate(550deg);}
+    75%  {transform: translate(70vw, 17vh) rotate(740deg);}
+    100% {transform: translate(110vw, 25vh) rotate(920deg)}
+  }
+
+  .leaf{
+    position: absolute;
+    z-index: 2;
+    animation-name: leafAnimation;
+    animation-duration: 12s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    height: 100px;
+    width: auto;
+  }
+
