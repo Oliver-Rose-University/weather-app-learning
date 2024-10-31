@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="java.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
     <div class="container">
         <div id="left-panel" class="container flexcolumn">
             <p>Temperature</p>
-            <div id="temperature-div">
-                <input type="range" id="temp-slider" class="slider-temp vertical-slider">
+            <div id="temperature">
+                <input type="range" min="-25" max="75" value="20" id="temp-slider" class="slider-temp vertical-slider">
             </div>
             <p id="temp-amount">30ºC</p>
         </div>

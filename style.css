@@ -35,20 +35,39 @@ body{
   #wind-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 25px;
-    height: 25px;
-    background: url(waterDrop.png);
-    background-size: 25px;
+    width: 35px;
+    height: 35px;
+    background: url(wind.png);
+    background-size: 35px;
     cursor: pointer;
   }
   
 #wind-slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    background: url(waterDrop.png);
-    background-size: 25px;
+    width: 35px;
+    height: 35px;
+    background: url(wind.png);
+    background-size: 35px;
     cursor: pointer;
   }
+
+  #temp-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width:75px;
+    height: 75px;
+    background: url(sun.png);
+    background-size: 75px;
+    cursor: pointer;
+  }
+  
+#temp-slider::-moz-range-thumb {
+    width: 75px;
+    height: 75px;
+    background: url(sun.png);
+    background-size: 75px;
+    cursor: pointer;
+  }
+
 
 
   .slider{
@@ -67,7 +86,7 @@ body{
     appearance: none;
     height: 25px;
     width: 40vh;
-    /* background:aqua; */
+    background: linear-gradient(-90deg, red, yellow);
     border-style: solid;
     border-color: black;
     border-width: 2px;
@@ -81,4 +100,8 @@ body{
   #temperature-div{
     height: 250px;
 
+  }
+
+  #temp-amount{
+    translate: 0px 275px;
   }
