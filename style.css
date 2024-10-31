@@ -1,0 +1,42 @@
+.container{
+    align-items: center;
+    justify-content: center;
+}
+
+.flexcolumn{
+    flex-direction: column;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+#humidity-slider{
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    height: 25px;
+    width: 50%;
+    background:aqua;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
+
+#humidity-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: url(waterDrop.png);
+    background-size: 25px;
+    cursor: pointer;
+  }
+  
+#humidity-slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: url(waterDrop.png);
+    background-size: 25px;
+    cursor: pointer;
+  }
