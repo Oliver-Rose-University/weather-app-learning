@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,30 @@
     <link rel="stylesheet" href="style.css">
     <script src="java.js" defer></script>
 </head>
+
 <body>
-    <div id="humidity" class="container flexcolumn">
-        <p>Humidity</p>
-        <input type="range" min="0" max="100" value="50" id="humidity-slider">
-        <p id="humidity-amount">placeholder</p>
+    <div class="container">
+        <div id="left-panel" class="container flexcolumn">
+            <p>Temperature</p>
+            <div id="temperature-div">
+                <input type="range" id="temp-slider" class="slider-temp vertical-slider">
+            </div>
+            <p id="temp-amount">30ºC</p>
+        </div>
+
+        <div id="right-panel" class="container flexcolumn">
+            <div id="wind" class="horizontal-slider">
+                <p>Wind Speed</p>
+                <input type="range" min="0" max="100" value="50" id="wind-slider" class="slider">
+                <p id="wind-amount">placeholder</p>
+            </div>
+            <div id="humidity" class="horizontal-slider">
+                <p>Humidity</p>
+                <input type="range" min="0" max="100" value="50" id="humidity-slider" class="slider">
+                <p id="humidity-amount">placeholder</p>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 .container{
     align-items: center;
     justify-content: center;
+    display: flex;
 }
 
 .flexcolumn{
@@ -10,17 +11,7 @@
 body{
     width: 100vw;
     height: 100vh;
-}
-
-#humidity-slider{
-    -webkit-appearance: none;  /* Override default CSS styles */
-    appearance: none;
-    height: 25px;
-    width: 50%;
-    background:aqua;
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
+    overflow: hidden;
 }
 
 #humidity-slider::-webkit-slider-thumb {
@@ -39,4 +30,55 @@ body{
     background: url(waterDrop.png);
     background-size: 25px;
     cursor: pointer;
+  }
+
+  #wind-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: url(waterDrop.png);
+    background-size: 25px;
+    cursor: pointer;
+  }
+  
+#wind-slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: url(waterDrop.png);
+    background-size: 25px;
+    cursor: pointer;
+  }
+
+
+  .slider{
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    height: 25px;
+    width: 25vw;
+    background:aqua;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+  }
+
+  .slider-temp{
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    height: 25px;
+    width: 40vh;
+    /* background:aqua; */
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+  }
+
+  .vertical-slider{
+    transform: rotate(-90deg);
+    translate: 0px 150px;
+  }
+
+  #temperature-div{
+    height: 250px;
+
   }
