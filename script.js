@@ -9,8 +9,16 @@ const humiditySlider = document.getElementById("humidity-slider");
 const windSlider = document.getElementById("wind-slider");
 const tempSlider = document.getElementById("temp-slider");
 const leafAnimations = document.getElementsByClassName("leaf");
+const humidityFilter = document.getElementById("humidity-filter");
+const windDirection = document.getElementById("wind-direction");
+const windNumber = document.getElementById("wind-number");
 
 const apiUrl = "http://localhost:5500/test.json";
+// const apiUrl = "http://api.weatherstack.com/current";
+const urlParams = {
+    query: "Norwich",
+    access_key: "2574e440f8fc0d81d16247be9385a1c9",
+};
 
 async function fetchData(){
     try{
@@ -41,7 +49,13 @@ function updateData(json) {
     for(const leaf of leafAnimations){
         leaf.style.animationDuration = newDuration + "s";
     }
+    humidityFilter.style.opacity = 0.5 * json.current.humidity / 100;
+
+    console.log("rotate("+json.current.wind_degree+")")
+    windDirection.style.transform = "rotate("+json.current.wind_degree+"deg)";
+    windNumber.innerHTML = "The Wind Direction is currently: " + json.current.wind_degree +"º!"
 }
 
 
-setInterval(fetchData, 500);
+// setInterval(fetchData, 500);
+fetchData()

@@ -126,3 +126,22 @@ body{
     width: auto;
   }
 
+#humidity-filter{
+    z-index: 3;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: blue;
+    opacity: 50%;
+}
+
+#wind-direction-div{
+    height: 150px;
+    width: auto;
+    translate: 75vw 0px;
+}
+#wind-direction{
+    height: 150px;;
+    width: auto;
+    transform: rotate(0deg);
+}
