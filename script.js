@@ -44,7 +44,7 @@ async function fetchData(){
 function updateData(json) {
     humidityAmount.innerHTML = ("The current Humidity is: " + json.current.humidity + "%!");
     humiditySlider.value = (json.current.humidity);
-    windAmount.innerHTML = ("The current Wind Speed is: " + json.current.wind_speed + "/Mph!");
+    windAmount.innerHTML = ("The current Wind Speed is: " + json.current.wind_speed + "/Kph!");
     windSlider.value = (json.current.wind_speed);
     tempAmount.innerHTML = (json.current.temperature + "ºC");
     tempSlider.value = (json.current.temperature);

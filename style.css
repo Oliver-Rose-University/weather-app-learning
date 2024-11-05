@@ -218,7 +218,7 @@ body{
   animation-iteration-count:infinite;
   animation-timing-function: linear;
   opacity: 1;
-translate: 0 200px ;
+  translate: 0 400px ;
 }
 
 @keyframes cloudsAnimation {
