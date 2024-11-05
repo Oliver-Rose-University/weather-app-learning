@@ -15,8 +15,11 @@
     </div>
     <img src="leaf.png" alt="leaf" id="leaf" class="leaf">
     <div class="container">
+        <div id="title">
+            <h1 id="norwich">NORWICH</h1>
+        </div>
         <div id="left-panel" class="container flexcolumn">
-            <p>Temperature</p>
+            <p id="temp-title">Temperature</p>
             <div id="temperature">
                 <input type="range" min="-25" max="75" value="20" id="temp-slider" class="slider-temp vertical-slider">
             </div>
@@ -35,10 +38,18 @@
                 <p id="humidity-amount">placeholder</p>
             </div>
         </div>
+        <div id="weather-type">
+            <p>Current Weather</p>
+            <img src="arrow.png" alt="arrow" id="weather-image">
+            <p id="weather-current">Current Weather</p>
+        </div>
     </div>
     <div id="wind-direction-div">
         <img src="arrow.png" alt="arrow" id="wind-direction">
         <p id="wind-number">Wind Direction: </p>
+    </div>
+    <div id="clouds">
+        <img src="clouds.png" alt="clouds" id="clouds-img">
     </div>
 </body>
 

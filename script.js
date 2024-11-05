@@ -9,11 +9,15 @@ const humiditySlider = document.getElementById("humidity-slider");
 const windSlider = document.getElementById("wind-slider");
 const tempSlider = document.getElementById("temp-slider");
 const leafAnimations = document.getElementsByClassName("leaf");
+const cloudAnimations = document.getElementsByClassName("cloud");
 const humidityFilter = document.getElementById("humidity-filter");
 const windDirection = document.getElementById("wind-direction");
 const windNumber = document.getElementById("wind-number");
+const weatherImage = document.getElementById("weather-image");
+const weatherCurrent = document.getElementById("weather-current");
+const cloudsImage = document.getElementById("clouds-img");
 
-const apiUrl = "http://localhost:5500/test.json";
+const apiUrl = "/test.json";
 // const apiUrl = "http://api.weatherstack.com/current";
 const urlParams = {
     query: "Norwich",
@@ -44,11 +48,24 @@ function updateData(json) {
     windSlider.value = (json.current.wind_speed);
     tempAmount.innerHTML = (json.current.temperature + "ºC");
     tempSlider.value = (json.current.temperature);
+    weatherImage.src = (json.current.weather_icons);
+    weatherCurrent.innerHTML = (json.current.weather_descriptions);
 
     const newDuration = (50 - Number(json.current.wind_speed)) * 11 / 50 + 1;
+    const newDurationCloud = (json.current.cloud_cover);
+
     for(const leaf of leafAnimations){
         leaf.style.animationDuration = newDuration + "s";
     }
+    if (json.current.cloud_cover === 0){
+        cloudsImage.style.opacity = 0;
+    }
+    else{
+        for(const cloud of cloudAnimations){
+            cloud.style.animationDuration = newDurationCloud + "s";
+        }
+    }
+
     humidityFilter.style.opacity = 0.5 * json.current.humidity / 100;
 
     console.log("rotate("+json.current.wind_degree+")")
