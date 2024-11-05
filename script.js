@@ -39,8 +39,6 @@ async function fetchData(){
     
 }
 
-
-
 function updateData(json) {
     humidityAmount.innerHTML = ("The current Humidity is: " + json.current.humidity + "%!");
     humiditySlider.value = (json.current.humidity);
