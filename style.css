@@ -156,7 +156,7 @@ body{
 #wind-direction-div{
     height: 150px;
     width: auto;
-    translate: 75vw 0px;
+    translate: 70vw 0px;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -191,7 +191,7 @@ body{
 
 #weather-type{
   position: absolute;
-  translate: 15vh 25vh;
+  translate: 15vh 25vw;
   align-items: center;
   justify-content: center;
   text-align: center;
